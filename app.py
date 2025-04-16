@@ -35,8 +35,21 @@ input_data = np.array([encoded_data])
 
 #Predict on user input
 if st.button("Predict Food Price"):
-    prediction = model.predict(input_data)
-    prediction = max(prediction, 0)
-    st.write(f"Predicted price: {prediction[0]:.2f}")
+    # Make the prediction
+prediction = model.predict(input_df)
+
+# Get the first prediction (if it's an array or list)
+if hasattr(prediction, '__getitem__'):
+    prediction = prediction[0]
+
+# Ensure the prediction is not negative
+prediction = max(prediction, 0)
+
+# Display the predicted price
+st.write(f"Predicted price: ₦{prediction:,.2f}")
+
+# Add a helpful note
+st.caption("Note: This is an estimated price based on past data. It may not be 100% accurate, but it can help guide your budget.")
+
 st.caption("Note: This is an estimated price based on trends. It may not be 100% accurate, but it helps you plan your budget.")
  
