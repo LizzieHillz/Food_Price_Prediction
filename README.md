@@ -1,6 +1,6 @@
 # 🧠 Price Prediction Model
 
-This repository contains a machine learning project aimed at predicting the price of items based on provided features using regression techniques. The project was developed using a Jupyter Notebook, with steps including data preprocessing, model training, and evaluation.
+This repository contains a machine learning project aimed at predicting the price of food items based on provided features using regression techniques. The project was developed using a Jupyter Notebook, with steps including data preprocessing, model training, and evaluation.
 
 ## 📌 Project Overview
 
