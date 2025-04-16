@@ -9,17 +9,17 @@ model = joblib.load(model_path)
 
 #Define streamlit UI
 st.title("Food Price Predicting App")
-st.write("This app predicts the future prices of farm produces. Note: it's prediction is not 100 percent accurate")
+st.write("This app predicts future prices of farm produce (50KG bag or per tuber). While not 100% accurate, it helps you plan your budget with a rough estimate.")
 
 #User input fields
-Product = st.selectbox("Product", ['Bread', 'Cassava_meal', 'Cowpeas', 'Gari', 'Groundnuts', 'Maize', 'Millet', 'Rice', 'Sorghum', 'Yam'])
+Product = st.selectbox("Product", ['Cassava_meal', 'Cowpeas', 'Gari', 'Groundnuts', 'Maize', 'Millet', 'Rice', 'Sorghum', 'Yam'])
 Year = st.number_input("Year", min_value=2007, max_value=2030)
 Month = st.number_input("Month", min_value=1, max_value=12)
 Day = st.number_input("Day", min_value=1, max_value=31)
 
 #Convert categorical values to numbers (Manual Label Encoding)
 category_mappings = {
-    'Bread': 0, 'Cassava_meal': 1, 'Cowpeas': 2, 'Gari': 3, 'Groundnuts': 4, 'Maize': 5, 'Millet': 6, 'Rice': 7, 'Sorghum': 8, 'Yam': 9
+    'Yam': 0, 'Cassava_meal': 1, 'Cowpeas': 2, 'Gari': 3, 'Groundnuts': 4, 'Maize': 5, 'Millet': 6, 'Rice': 7, 'Sorghum': 8
 }
 
 #Apply encoding
