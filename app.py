@@ -36,7 +36,7 @@ input_data = np.array([encoded_data])
 #Predict on user input
 if st.button("Predict Food Price"):
     # Make the prediction
-    prediction = model.predict(input_df)
+    prediction = model.predict(input_data)
 
 # Get the first prediction (if it's an array or list)
 if hasattr(prediction, '__getitem__'):
