@@ -38,6 +38,12 @@ This repository contains a machine learning project aimed at predicting the pric
 - Matplotlib, Seaborn
 - Scikit-learn
 
+## 🙌 Acknowledgements
+This project was created as part of my machine learning learning journey. Feel free to fork and use for your own projects.
+
+## 📬 Contact
+For feedback or collaboration, reach out to me via LinkedIn (http://www.linkedin.com/in/chisom-elizabeth-omegor-a21906233) or email (omegorchisom25@gmail.com).
+
 ## 🗂️ How to Use
 
 1. Clone the repo:
