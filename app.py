@@ -36,5 +36,7 @@ input_data = np.array([encoded_data])
 #Predict on user input
 if st.button("Predict Food Price"):
     prediction = model.predict(input_data)
+    prediction = max(prediction, 0)
     st.write(f"Predicted price: {prediction[0]:.2f}")
+st.caption("Note: This is an estimated price based on trends. It may not be 100% accurate, but it helps you plan your budget.")
  
