@@ -39,8 +39,7 @@ if st.button("Predict Food Price"):
     prediction = model.predict(input_data)
 
 # Get the first prediction (if it's an array or list)
-if hasattr(prediction, '__getitem__'):
-    prediction = prediction[0]
+    prediction = float(np.squeeze(prediction))
 
 # Ensure the prediction is not negative
     prediction = max(prediction, 0)
